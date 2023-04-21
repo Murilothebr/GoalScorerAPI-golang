@@ -2,8 +2,16 @@ package main
 
 import "fmt"
 
-import "rsc.io/quote"
-
 func main() {
-    fmt.Println(quote.Hello())
+
+	i := 01;
+
+	for{
+		if i <= 10{
+			fmt.Println(i);
+		}else{
+			break;
+		}
+		i++;
+	}
 }
