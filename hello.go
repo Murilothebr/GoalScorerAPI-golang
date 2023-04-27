@@ -3,15 +3,13 @@ package main
 import "fmt"
 
 func main() {
+	a := []int{}
+	b := make([]int, 1)
 
-	i := 01;
+	fmt.Println(a)
+	fmt.Println(b)
 
-	for{
-		if i <= 10{
-			fmt.Println(i);
-		}else{
-			break;
-		}
-		i++;
-	}
+	a = append(a, 1)
+
+	fmt.Println(a)
 }
