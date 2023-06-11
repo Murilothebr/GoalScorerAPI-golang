@@ -1,19 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func vals() (int, int) {
-    return 3, 7
+func fill(index int, arr [5]int, number int) [5]int {
+	var array [5]int = arr
+	array[index] = number
+	return array
 }
 
 func main() {
 
-	a := make([]int, 1)
+	var emptyarray [5]int
+	fmt.Println("empty: ", emptyarray)
+	fmt.Println("------------------------------")
 
-    c, d := vals()
+	var array [5]int
 
-	a = append(a, c)
-	a = append(a, d)
+	for {
+		fmt.Println("digite o index")
 
-    fmt.Println(a)
+		var index int
+   		fmt.Scan(&index)
+
+		fmt.Println("digite o digite o numero")
+		var number int 
+		fmt.Scan(&number)
+
+		
+		array = fill(index, array, number)
+
+		fmt.Println(array)
+		fmt.Println("---------------------")
+	}
 }
