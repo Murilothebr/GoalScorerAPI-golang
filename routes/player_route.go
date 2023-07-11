@@ -1,7 +1,12 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"murilothebr/goalscorer/controllers"
 
-func PlayersRoute(router *gin.Engine){
+	"github.com/gin-gonic/gin"
+)
 
+func PlayersRoute(router *gin.Engine) {
+	router.POST("/player", controllers.CreatePlayer())
+	router.GET("/player", controllers.GetPlayers())
 }
